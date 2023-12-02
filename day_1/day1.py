@@ -1,4 +1,5 @@
 def _replace_words_with_digits(input_string):
+    #Because it can be influecing before and after words
     input_string = (
         input_string.replace("one", "one1one")
         .replace("two", "two2two")
