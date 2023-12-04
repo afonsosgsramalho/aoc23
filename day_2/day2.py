@@ -1,6 +1,6 @@
 import re
 from collections import defaultdict
-import math
+
 
 def process_data():
     with open("day2.txt") as f:
