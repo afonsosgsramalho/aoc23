@@ -4,8 +4,10 @@ def get_diff(nums):
 
     if all(x == 0 for x in nums):
         return 0
-    
-    deltas = [y - x for x, y in zip(nums, nums[1:])]
+    deltas = []
+    for i in range(1, len(nums)):
+        deltas.append(nums[i] - nums[i - 1])
+    # deltas = [y - x for x, y in zip(nums, nums[1:])] other way to do it
     diff = get_diff(deltas)
 
     return nums[-1] + diff # part1
